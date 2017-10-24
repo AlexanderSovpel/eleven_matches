@@ -1,0 +1,94 @@
+﻿<Window x:Class="Game.Test"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Game"
+        mc:Ignorable="d"
+        Title="Test">
+    <Window.Resources>
+        <ControlTemplate x:Key="RoundButtonTemplate" TargetType="{x:Type Button}">
+            <Grid x:Name="controlLayout">
+                <Ellipse x:Name="buttonSurface" Fill="LightBlue"/>
+                <Label x:Name="buttonCaption" VerticalAlignment="Center"
+					HorizontalAlignment="Center"
+					FontWeight="Bold" FontSize="20" Content="OK!"/>
+            </Grid>
+
+            <ControlTemplate.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter TargetName="buttonSurface" Property="Fill" Value="Blue"></Setter>
+                    <Setter TargetName="buttonCaption" Property="Foreground" Value="Yellow"></Setter>
+                </Trigger>
+                <Trigger Property="IsPressed" Value="True">
+                    <Setter TargetName="buttonSurface" Property="Width" Value="90"></Setter>
+                    <Setter TargetName="buttonSurface" Property="Height" Value="90"></Setter>
+                </Trigger>
+            </ControlTemplate.Triggers>
+        </ControlTemplate>
+    </Window.Resources>
+    <DockPanel>
+        <Menu DockPanel.Dock="Top">
+            <MenuItem Header="Game">
+                <MenuItem Header="New"></MenuItem>
+                <MenuItem Header="Open"></MenuItem>
+                <MenuItem Header="Save"></MenuItem>
+                <Separator></Separator>
+                <MenuItem Header="End"></MenuItem>
+            </MenuItem>
+            <MenuItem Header="Player">
+                <MenuItem Header="Login"></MenuItem>
+            </MenuItem>
+        </Menu>
+
+        <Canvas>
+            <Button Height="150" Width="150" Margin="0" HorizontalAlignment="Center" 
+                    Click="Button_Click"
+                    MouseEnter="Button_MouseEnter"
+                    MouseLeave="Button_MouseLeave" Template="{DynamicResource RoundButtonTemplate}"/>
+
+            <Path Canvas.Left="534.563" Canvas.Top="43.71">
+                <Path.Data>
+                    <CombinedGeometry GeometryCombineMode="Union">
+                        <CombinedGeometry.Geometry1>
+                            <CombinedGeometry GeometryCombineMode="Exclude">
+                                <CombinedGeometry.Geometry1>
+                                    <EllipseGeometry Center="100,100" RadiusX="80" RadiusY="80"></EllipseGeometry>
+                                </CombinedGeometry.Geometry1>
+                                <CombinedGeometry.Geometry2>
+                                    <EllipseGeometry Center="100,100" RadiusX="65" RadiusY="65"></EllipseGeometry>
+                                </CombinedGeometry.Geometry2>
+                            </CombinedGeometry>
+                        </CombinedGeometry.Geometry1>
+                        <CombinedGeometry.Geometry2>
+                            <RectangleGeometry Rect="30,93 140,15">
+                                <RectangleGeometry.Transform>
+                                    <RotateTransform Angle="135" CenterX="100" CenterY="100"></RotateTransform>
+                                </RectangleGeometry.Transform>
+                            </RectangleGeometry>
+                        </CombinedGeometry.Geometry2>
+                    </CombinedGeometry>
+                </Path.Data>
+                <Path.Fill>
+                    <RadialGradientBrush GradientOrigin="0.75,0.25" RadiusX="0.6" RadiusY="0.6">
+                        <GradientStop Color="Orange" Offset="0"></GradientStop>
+                        <GradientStop Color="Red" Offset="1"></GradientStop>
+                    </RadialGradientBrush>
+                </Path.Fill>
+            </Path>
+
+            <Path Stroke="LightBlue" StrokeThickness="6" StrokeStartLineCap="Round" StrokeEndLineCap="Round">
+                <Path.Data>
+                    <PathGeometry>
+                        <PathFigure StartPoint="200,150">
+                            <ArcSegment Point="480,20" Size="200,300"></ArcSegment>
+                        </PathFigure>
+                    </PathGeometry>
+                </Path.Data>
+            </Path>
+
+            <Path Fill="#4DFC3F" Stroke="#000072" StrokeMiterLimit="10" Data="M40.552,28.494C37.01,31.466,28.253,37.701,25.149,50
+	s0.345,26.654,35.402,18.839S75.724,46.563,65.494,50S43.54,49.414,55.379,38.494C67.219,27.575,50.552,20.103,40.552,28.494z" Canvas.Left="294.632" Canvas.Top="218.275" Height="147.548" Stretch="Fill" Width="167.442"/>
+        </Canvas>
+    </DockPanel>
+</Window>

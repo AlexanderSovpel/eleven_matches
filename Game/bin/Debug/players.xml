@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<ArrayOfPlayer xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Player>
+    <Name>Игрок 1</Name>
+    <Win>1</Win>
+    <Loose>4</Loose>
+  </Player>
+  <Player>
+    <Name>Игрок 2</Name>
+    <Win>4</Win>
+    <Loose>1</Loose>
+  </Player>
+  <Player>
+    <Name>Саша</Name>
+    <Win>1</Win>
+    <Loose>0</Loose>
+  </Player>
+  <Player>
+    <Name>Иса</Name>
+    <Win>0</Win>
+    <Loose>0</Loose>
+  </Player>
+  <Player>
+    <Name>Аня</Name>
+    <Win>0</Win>
+    <Loose>0</Loose>
+  </Player>
+  <Player>
+    <Name>Валера</Name>
+    <Win>0</Win>
+    <Loose>0</Loose>
+  </Player>
+  <Player>
+    <Name>butter</Name>
+    <Win>5</Win>
+    <Loose>5</Loose>
+  </Player>
+  <Player>
+    <Name>bread</Name>
+    <Win>1</Win>
+    <Loose>1</Loose>
+  </Player>
+  <Player>
+    <Name>cat</Name>
+    <Win>4</Win>
+    <Loose>4</Loose>
+  </Player>
+  <Player>
+    <Name>Игрок 1ffd</Name>
+    <Win>0</Win>
+    <Loose>0</Loose>
+  </Player>
+</ArrayOfPlayer>

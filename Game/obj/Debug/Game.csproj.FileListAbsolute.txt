@@ -1,0 +1,5 @@
+C:\Users\Alexander\documents\visual studio 2015\Projects\Game\Game\obj\Debug\MainWindow.g.cs
+C:\Users\Alexander\documents\visual studio 2015\Projects\Game\Game\obj\Debug\StartPage.g.cs
+C:\Users\Alexander\documents\visual studio 2015\Projects\Game\Game\obj\Debug\App.g.cs
+C:\Users\Alexander\documents\visual studio 2015\Projects\Game\Game\obj\Debug\Game_MarkupCompile.cache
+C:\Users\Alexander\documents\visual studio 2015\Projects\Game\Game\obj\Debug\Game_MarkupCompile.lref
